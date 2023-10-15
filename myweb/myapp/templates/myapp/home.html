@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/custom.css' %}">
+    <style>
+        /* Custom Styles */
+        body {
+            background-image: url("{% static 'myapp/background.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .intro-section {
+    background-image: url("{% static 'myapp/intro-background.jpg' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.intro-section h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.intro-section p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+        .intro-section button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .intro-section button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to EDUCONNECT</h1>
+        <h2>A platform by the students, for the students.</h2>
+        <div class="header-buttons">
+            <a href="{% url 'home' %}" class="nav-button">Home</a>
+            <a href="{% url 'query' %}" class="nav-button">Query</a>
+            <a href="{% url 'resources' %}" class="nav-button">Resources</a>
+            <a href="{% url 'about' %}" class="nav-button">About us</a>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>"EDUCONNECT" is a cross-platform for students to ask their doubts and queries. It is made by students, for students. We are in the developing stage, so apologies for the inconvenience. We hope you enjoy your college life and interact on our site.</p>
+            <button onclick="window.location.href='{% url 'query' %}'">ASK YOUR QUERY</button>
+
+        </div>
+    </section>
+
+    <section class="goals-section">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-sidebar">
+                    <h3>Important Information</h3>
+                    <p>Here is some important information you should know.</p>
+                </div>
+                <div class="section-main">
+                    <h2>Our Goals</h2>
+                    <ul>
+                        <li>Goal 1: To help students ask their doubts.</li>
+                        <li>Goal 2: To let students access all the resources at one place.</li>
+                        <li>Goal 3: To implement the future plans as needed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features-section">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-main">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Feature 1: Get all your doubts and queries cleared.</li>
+                        <li>Feature 2: Get all the study material for your 4 years of "happiness".</li>
+                        <li>Feature 3: Chat with anyone anonymously.</li>
+                    </ul>
+                </div>
+                <div class="section-sidebar">
+                    <h3>Upcoming Events</h3>
+                    <p>Check out our upcoming events and stay updated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="sponsor-section">
+        <div class="container">
+            <h2>Sponsored By</h2>
+            <div class="sponsor-image">
+                <img src="{% static 'myapp/sponsor.jpg' %}" alt="Sponsor Image">
+            </div>
+            <div class="sponsor-text">
+                <p>Learn more about our sponsor <a href="#">here</a>.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="image-gallery-section">
+        <div class="container">
+            <h2>Image Gallery</h2>
+            <div class="image-container">
+                <img src="{% static 'myapp/image1.jpg' %}" alt="Image 1">
+                <img src="{% static 'myapp/image2.jpg' %}" alt="Image 2">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

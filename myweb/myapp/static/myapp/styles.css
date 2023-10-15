@@ -1,0 +1,74 @@
+
+/* styles.css */
+
+/* Style for chat messages */
+#chat-messages {
+    margin-top: 20px;
+    border: 1px solid #575353;
+    padding: 10px;
+    max-width: 500px;
+  }
+  
+  #chat-messages p {
+    margin: 0;
+    padding: 5px;
+  }
+  
+  #chat-messages p.reply {
+    margin-left: 20px;
+    background-color: #828ea7;
+  }
+  
+  /* Style for input form */
+  #chat-form {
+    margin-top: 20px;
+  }
+  
+  #chat-form input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  #chat-form button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #c44747;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #chat-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* styles.css */
+
+
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #6c8eff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  
+  

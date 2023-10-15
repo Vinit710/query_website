@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resources</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/custom.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Resources</h1>
+        <div class="header-buttons">
+            <a href="{% url 'home' %}" class="nav-button">Home</a>
+            <a href="{% url 'query' %}" class="nav-button">Query</a>
+            <a href="{% url 'resources' %}" class="nav-button">Resources</a>
+            <a href="{% url 'about' %}" class="nav-button">About us</a>
+        </div>
+    </header>
+   
+
+    <section class="subject-section">
+        <div class="container">
+            <h2>Mathematics</h2>
+            <!-- Add resources related to Mathematics here -->
+        </div>
+    </section>
+
+    <section class="subject-section">
+        <div class="container">
+            <h2>Basis of Mechanical Engineering</h2>
+            <!-- Add resources related to Chemistry here -->
+            <ul class="resource-list">
+                <li><a href="{% static 'myapp/sample.pdf' %}" target="_blank" class="resource-link">1] Sample File</a></li>
+                <li><a href="{% static 'myapp/Die casting.pdf' %}" target="_blank" class="resource-link">2] Die Casting</a></li>
+                <li><a href="{% static 'myapp/Unit 3.pdf' %}" target="_blank" class="resource-link">3] UNIT 3</a></li>
+                <li><a href="{% static 'myapp/HEAT EXCHANGER.pdf' %}" target="_blank" class="resource-link">4] HEAT EXCHANGER</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class="subject-section">
+        <div class="container">
+            <h2>Physics</h2>
+            <!-- Add resources related to Mathematics here -->
+        </div>
+    </section>
+
+    <section class="subject-section">
+        <div class="container">
+            <h2>Chemistry</h2>
+            <!-- Add resources related to Mathematics here -->
+        </div>
+    </section>
+
+
+    <!-- Add more sections for other subjects as needed -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

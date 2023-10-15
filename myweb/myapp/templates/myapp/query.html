@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Querys</h1>
+        <div class="header-buttons">
+            <a href="{% url 'home' %}" class="nav-button">Home</a>
+            <a href="{% url 'query' %}" class="nav-button">Query</a>
+            <a href="{% url 'resources' %}" class="nav-button">Resources</a>
+            <a href="{% url 'about' %}" class="nav-button">About us</a>
+        </div>
+    </header>
+   
+
+    <div id="chat-messages">
+        {% for message in messages %}
+            {% if not message.parent_message %}
+                <p>{{ message.sender }}: {{ message.message }}</p>
+                <form method="post" action="{% url 'save_message' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="sender" value="{{ message.sender }}">
+                    <input type="hidden" name="parent_id" value="{{ message.id }}">
+                    <input type="text" name="message" placeholder="Reply to {{ message.sender }}">
+                    <button type="submit">Reply</button>
+                </form>
+            {% endif %}
+            {% for reply in message.replies.all %}
+                <p class="reply">{{ reply.sender }}: {{ reply.message }}</p>
+            {% endfor %}
+        {% endfor %}
+        
+        <form method="post" action="{% url 'save_message' %}">
+            {% csrf_token %}
+            <input type="text" name="sender" placeholder="Your Name">
+            <input type="text" name="message" placeholder="Your Question">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
